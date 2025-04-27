@@ -9,6 +9,7 @@ import contabilidade from "../assets/Contabilidade.jpg";
 import societario from "../assets/Societário.png";
 import fiscal from "../assets/Fiscal.jpg";
 import pessoal from "../assets/Dpto_Pessoal.jpg";
+import whatsapp from "../assets/whatsapp1.png";
 
 import { Card, CardContent } from "./ui/card"
 import {
@@ -155,7 +156,7 @@ export default function Initial() {
                 </div>
             </section>
 
-            <Budget/>
+            <Budget />
 
             <section className="bg-[#E8E8E8] text-center py-20 px-3">
                 <div className="flex flex-col items-center">
@@ -188,6 +189,16 @@ export default function Initial() {
                     </Carousel>
                 </div>
             </section>
+            <div className="fixed bottom-10 right-4 md:right-8 z-50">
+                <Link href="https://wa.me/559884235004">
+                    <Image
+                        src={whatsapp}
+                        alt="Ícone do WhatsApp"
+                        // width={70}
+                        className="hover:scale-110 transition-transform duration-200 rounded-full w-16 md:w-20"
+                    />
+                </Link>
+            </div>
 
         </div>
     )
