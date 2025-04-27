@@ -18,27 +18,29 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "./ui/carousel"
-import lipe from "../assets/WhatsApp Image 2025-04-03 at 21.17.50.jpeg"
+import Commenter1 from "../assets/Commenter 1.png"
+import Commenter2 from "../assets/Commenter 2.png"
+import Commenter3 from "../assets/Commenter 3.png"
 import Budget from "./budget";
 
 const carouselItems = [
     {
         id: 1,
-        name: "Lipe São João",
-        image: lipe,
-        text: "As dúvidas são sempre esclarecidas com atendimento prestativo, que entende o que eu digo. Pagamentos são realizados rigorosamente em dia. Excelente empresa. Recomendo!",
+        name: "Arian Viegas",
+        image: Commenter1,
+        text: "Ótimo atendimento, rápido e eficiente. Melhor acessória de São Luís.",
     },
     {
         id: 2,
-        name: "Lipe São João",
-        image: lipe,
-        text: "Pontualidade na entrega de documentos e suporte atencioso. Sempre atendem prontamente minhas solicitações",
+        name: "Fabio Guilherme",
+        image: Commenter2,
+        text: "Atendimento foi perfeito, entrega no prazo.",
     },
     {
         id: 3,
-        name: "Lipe São João",
-        image: lipe,
-        text: "Equipe comprometida com a satisfação do cliente, atende as necessidade de minha empresa.",
+        name: "Erik Filho",
+        image: Commenter3,
+        text: "Atendimento excelente! Super indico 👏🏻👍🏻👏🏻😃😃",
     }
 
 ]
@@ -92,7 +94,7 @@ export default function Initial() {
                     <h1 className="text-[25px]">Alguns de nossos serviços</h1>
                     <hr className="w-20 mb-10 mt-3 md:mt-0 md:mb-0 mx-auto md:mx-0" />
                 </div>
-                <span className="bg-[#E28B00] hover:bg-[#D77300] duration-150 text-white text-[18px] py-2 px-6"><Link href={"#"}>Solicite um orçamento</Link></span>
+                <span className="bg-[#E28B00] hover:bg-[#D77300] duration-150 text-white text-[18px] py-2 px-6"><Link href={"/contact"}>Solicite um orçamento</Link></span>
             </div>
             <div className="inline-flex flex-wrap md:flex-nowrap md:flex justify-center md:justify-around items-center max-w-[70em] md:mx-auto gap-x-10 gap-y-5">
                 <div className="bg-white px-3 py-2 w-70 md:w-full h-[20em] rounded-lg shadow-md flex flex-col items-center gap-y-2 hover:scale-110 duration-300">
@@ -165,13 +167,13 @@ export default function Initial() {
                         <CarouselContent>
                             {carouselItems.map((item) => (
                                 <CarouselItem key={item.id}>
-                                    <div className="p-1 block md:flex items-center justify-between w-full">
+                                    <div className="p-1 block md:flex items-center justify-around w-full">
                                         <div className="inline-flex md:flex md:flex-col items-center gap-x-10 md:gap-y-2">
                                             <Image src={item.image} alt="foto pessoal" width={80} height={80} />
                                             <p className="text-[#E28B00] font-bold">{item.name}</p>
                                         </div>
-                                        <Card className="max-h-[9em] md:max-h-[10em] max-w-[30em] mt-5 md:mt-0">
-                                            <CardContent className="flex aspect-square justify-center">
+                                        <Card className="max-h-[9em] md:max-h-[10em] md:w-[30em] mt-5 md:mt-0">
+                                            <CardContent className="flex aspect-square ">
                                                 <span className="text-[15px] font-normal text-start">
                                                     {item.text}
                                                 </span>

@@ -7,8 +7,12 @@ import fundo from "../assets/fundo header.jpg";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import PageInformation from "./PageInformation";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+
+    const pathname = usePathname();
 
     const [isOpen, setIsOpen] = useState(false);
     const toogleMenu = () => {
@@ -16,7 +20,7 @@ export default function Navbar() {
     }
 
     return (
-        <div className="relative w-full h-[28em] bg-black/50 ">
+        <div className={`relative w-full ${pathname === "/" ? "h-[28em]" : "h-[25em]"} bg-black/50 `}>
             <Image
                 src={fundo}
                 alt="Fundo do Header"
@@ -32,7 +36,7 @@ export default function Navbar() {
                     <li className="hover:bg-[#E28B00] duration-100 px-3 py-1"><Link href="/on"> Sobre Nós</Link></li>
                     <li className="hover:bg-[#E28B00] duration-100 px-3 py-1"><Link href="/services"> Serviços</Link></li>
                     <li className="hover:bg-[#E28B00] duration-100 px-3 py-1"><Link href="/companies"> Abrir Empresa</Link></li>
-                    <li className="hover:bg-[#E28B00] duration-100 px-3 py-1"><Link href="#contact"> Contato</Link></li>
+                    <li className="hover:bg-[#E28B00] duration-100 px-3 py-1"><Link href="/contact"> Contato</Link></li>
                 </ul>
 
                 <div className="md:hidden">
@@ -60,10 +64,10 @@ export default function Navbar() {
                             <Link href="/services" className="block w-full px-4 py-1">Serviços</Link>
                         </li>
                         <li className="hover:bg-[#E28B00] duration-100 w-full">
-                            <Link href="#companies" className="block w-full px-4 py-1">Abrir Empresa</Link>
+                            <Link href="/companies" className="block w-full px-4 py-1">Abrir Empresa</Link>
                         </li>
                         <li className="hover:bg-[#E28B00] duration-100 w-full">
-                            <Link href="#contact" className="block w-full px-4 py-1">Contato</Link>
+                            <Link href="/contact" className="block w-full px-4 py-1">Contato</Link>
                         </li>
                     </ul>
 
@@ -75,13 +79,7 @@ export default function Navbar() {
                 </div>
             )}
 
-            <div className="text-white mx-auto flex flex-col justify-center md:items-start items-center mt-10 max-w-[23em] md:max-w-[25em] md:ml-30">
-                <h1 className="text-[2.5em] md:text-[3.5em] font-sans text-center md:text-start leading-none">Contabilidade profissional e transparente</h1>
-                <div className="flex justify-center md:justify-normal gap-x-4 mt-5 w-full">
-                    <span className="border px-3 py-2 w-60 text-center text-[14px] bg-[#D77300]"><Link href={""}>Solicite um orçamento</Link></span>
-                    <span className="border px-3 py-2 w-60 text-center text-[14px] hover:bg-[#E28B00] duration-100 hover:border-[#E28B00] cursor-pointer"><Link href={""}>Abra sua empresa</Link></span>
-                </div>
-            </div>
+            <PageInformation/>
         </div>
     );
 }

@@ -22,7 +22,7 @@ export default function Companies() {
                 </div>
             </div>
 
-            <div className="bg-[#cfcaca] md:flex items-center gap-x-14 px-10 py-20 text-black">
+            <div className="bg-[#cfcaca] md:flex items-center justify-between px-10 py-20 text-black">
                 <div>
                     <Image src={img} alt="Foto lateral" width={400} />
                 </div>
@@ -52,38 +52,39 @@ export default function Companies() {
                 </div>
             </div>
 
-            <div className="md:flex justify-between items-center gap-x-24 bg-white text-black">
+            <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-x-24 bg-white text-black">
                 <div>
-                    <div className="flex flex-col items-center">
-                        <hr className="w-20 border-[#E28B00]"/>
-                        <h1 className="mb-16 text-[1.5em] text-center">Comece agora</h1>
+                    <div className="flex flex-col items-center mt-10 md:mt-0">
+                        <hr className="w-14 md:w-20 border-[#E28B00]"/>
+                        <h1 className="mb-10 md:mb-16 text-[1.5em] text-center">Comece agora</h1>
                     </div>
-                    <div className="flex flex-col items-center gap-y-16">
-                        <div className="w-80 flex gap-x-5">
+                    <div className="md:flex flex-col items-center gap-y-16 px-3 md:px-0">
+                        <div className="md:w-80 flex gap-x-5">
                             <hr className="md:w-px h-3 md:h-32 bg-[#E28B00] border-none "/>
                             <div>
                                 <h3 className="font-bold text-[16px] mb-3">Equipe qualificada​</h3>
-                                <p className="text-[14px] text-[#585858]">Nossa equipe é formada por profissionais que possuem alta qualificação, experiência e formação direcionada ao segmento, incluindo diversos cursos de especialização.</p>
+                                <p className="text-[14px] text-[#585858] mb-5">Nossa equipe é formada por profissionais que possuem alta qualificação, experiência e formação direcionada ao segmento, incluindo diversos cursos de especialização.</p>
                             </div>
                         </div>
-                        <div className="w-80 flex gap-x-5 ml-80 pr-3">
+                        <div className="md:w-80 flex gap-x-5 md:ml-80 pr-3">
                             <hr className="md:w-px h-3 md:h-26 bg-[#E28B00] border-none "/>
                             <div>
                                 <h3 className="font-bold text-[16px] mb-3">Proposta aceita :)</h3>
-                                <p className="text-[14px] text-[#585858]">A partir desse momento, nós vamos acompanhar todas as suas obrigações fiscais e orientar suas ações, mês a mês.</p>
+                                <p className="text-[14px] text-[#585858] mb-5">A partir desse momento, nós vamos acompanhar todas as suas obrigações fiscais e orientar suas ações, mês a mês.</p>
                             </div>
                         </div>
-                        <div className="w-80 flex gap-x-5">
+                        <div className="md:w-80 flex gap-x-5">
                             <hr className="md:w-px h-3 md:h-38 bg-[#E28B00] border-none "/>
                             <div>
                                 <h3 className="font-bold text-[16px] mb-3">Nossos contadores cuidando da sua empresa</h3>
-                                <p className="text-[14px] text-[#585858]">Nosso time de contadores irá manter todas as obrigações legais da sua empresa em dia. Teve alguma dúvida? Nossa equipe estará a postos para ajudar no que for preciso.</p>
+                                <p className="text-[14px] text-[#585858] mb-10">Nosso time de contadores irá manter todas as obrigações legais da sua empresa em dia. Teve alguma dúvida? Nossa equipe estará a postos para ajudar no que for preciso.</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div>
-                    <Image src={imgAgora} alt="Foto lateral direito" width={500}/>
+                    <Image src={imgAgora} alt="Foto lateral direito" className="w-full md:w-2xl"/>
                 </div>
             </div>
         </div>

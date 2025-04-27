@@ -1,5 +1,6 @@
 import Image from "next/image"
 import inovcao from "../assets/people-working-elegant-cozy-office-space.jpg"
+import Link from "next/link"
 
 export default function Budget() {
     return (
@@ -14,7 +15,7 @@ export default function Budget() {
                 <h1 className="text-[2em] md:text-[3em] text-black max-w-72">Confiança & Inovação</h1>
                 <p className="text-[#727171] text-[12px] md:text-[16px] py-5 w-64 md:w-full">Pare de perder seu tempo com burocracia e
                 solicite um orçamento com a Contabilidade</p>
-                <button className="bg-[#E28B00] text-[12px] md:text-[16px] py-2 px-4 md:px-8">Solicite um orçamento</button>
+                <Link href="/contact" className="bg-[#E28B00] text-[12px] md:text-[16px] py-2 px-4 md:px-8">Solicite um orçamento</Link >
             </div>
         </div>
     )
